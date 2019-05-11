@@ -81,11 +81,23 @@ namespace Benedicta.Areas.Manage.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title,Text,Photo")] Tea tea)
+        public ActionResult Edit([Bind(Include = "Id,Title,Text,Photo")] Tea tea,HttpPostedFileBase Photo)
         {
+            db.Entry(tea).State = EntityState.Modified;
+
+            if (Photo == null)
+            {
+                db.Entry(tea).Property(a => a.Photo).IsModified = false;
+            }
+            else
+            {
+                string fileName = DateTime.Now.ToString("yyyyMMddHHmmssff") + Photo.FileName;
+                string path = Server.MapPath("~/Uploads/");
+                tea.Photo = fileName;
+            }
+
             if (ModelState.IsValid)
             {
-                db.Entry(tea).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

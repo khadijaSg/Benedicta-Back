@@ -7,7 +7,7 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("create","menus", FormMethod.Post, new { @class="col-lg-6",@style="margin:0 auto"}))
 {
     @Html.AntiForgeryToken()
     
