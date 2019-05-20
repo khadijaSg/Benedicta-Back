@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using Benedicta.Models;
 
@@ -50,6 +51,7 @@ namespace Benedicta.Areas.Manage.Controllers
         {
             if (ModelState.IsValid)
             {
+                user.Password = Crypto.HashPassword(user.Password);
                 db.User.Add(user);
                 db.SaveChanges();
                 return RedirectToAction("Index");

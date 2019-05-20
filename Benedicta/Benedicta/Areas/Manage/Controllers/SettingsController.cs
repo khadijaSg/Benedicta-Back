@@ -52,11 +52,13 @@ namespace Benedicta.Areas.Manage.Controllers
             {
                 string fileName = DateTime.Now.ToString("yyyyMMddHHmmssff") + NavbarPhoto.FileName;
                 string path = Server.MapPath("~/Uploads/");
+                NavbarPhoto.SaveAs(path + fileName);
                 setting.NavbarPhoto = fileName;
 
                 string fileNameLogo = DateTime.Now.ToString("yyyyMMddHHmmssff") + Logo.FileName;
                 string pathLogo = Server.MapPath("~/Uploads/");
-                setting.Logo = fileName;
+                Logo.SaveAs(path + fileName);
+                setting.Logo = fileNameLogo;
 
                 db.Setting.Add(setting);
                 db.SaveChanges();
@@ -98,6 +100,7 @@ namespace Benedicta.Areas.Manage.Controllers
             {
                 string fileName = DateTime.Now.ToString("yyyyMMddHHmmssff") + Logo.FileName;
                 string path = Server.MapPath("~/Uploads/");
+                Logo.SaveAs(path + fileName);
                 setting.Logo = fileName;
             }
             if (NavbarPhoto == null)
@@ -108,6 +111,7 @@ namespace Benedicta.Areas.Manage.Controllers
             {
                 string fileName = DateTime.Now.ToString("yyyyMMddHHmmssff") + NavbarPhoto.FileName;
                 string path = Server.MapPath("~/Uploads/");
+                NavbarPhoto.SaveAs(path + fileName);
                 setting.NavbarPhoto = fileName;
             }
 

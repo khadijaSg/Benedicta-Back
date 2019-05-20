@@ -52,6 +52,7 @@ namespace Benedicta.Areas.Manage.Controllers
             {
                 string fileName = DateTime.Now.ToString("yyyyMMddHHmmssff") + Photo.FileName;
                 string path = Server.MapPath("~/Uploads/");
+                Photo.SaveAs(path + fileName);
                 slider.Photo = fileName;
                 db.Slider.Add(slider);
                 db.SaveChanges();
@@ -93,6 +94,7 @@ namespace Benedicta.Areas.Manage.Controllers
             {
                 string fileName = DateTime.Now.ToString("yyyyMMddHHmmssff") + Photo.FileName;
                 string path = Server.MapPath("~/Uploads/");
+                Photo.SaveAs(path + fileName);
                 slider.Photo = fileName;
             }
 

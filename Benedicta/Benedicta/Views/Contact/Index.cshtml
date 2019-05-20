@@ -1,32 +1,65 @@
 ﻿
+
+@model Benedicta.Models.AddView
+
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Benedicta";
 }
 
+
+@foreach (var item in Model.Settings)
+{
+    <section id="ContactBg"  style="background-image: url(../../Uploads/@item.NavbarPhoto);">
+        <div class="container-fluid">
+            <div class="row text-center" style="margin-top:200px;">
+                <div class="col-12 mb-3">
+                    <h1>Contact Us</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+}
 <!-- JOIN US SECTION STARTS -->
 <section id="JoinUs">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
+
+
             <div class="col-lg-4 text-center">
-                <h5 style="font-size:60px; margin-top:100px;">Address</h5>
-                <p style="font-size:19px; margin-bottom:120px">15 Name Street, Honkong China, 256445</p>
+                <h5>Address</h5>
+
+                @foreach (var item in Model.Settings)
+                {
+                    <p>@item.Adress</p>
+
+                }
+
             </div>
+
+
             <div class="col-lg-4 text-center">
-                <h5 style="font-size:60px; margin-top:100px;">Join Us</h5>
-                <a class="link" href="">
-                    <i class="fab fa-facebook-f"
-                       style="font-size:22px; margin-bottom:120px;"></i>
-                </a>
-                <a class="link" href="">
-                    <i class="fab fa-instagram"
-                       style="padding-left:25px;font-size:22px; margin-bottom:120px;"></i>
-                </a>
+                <h5>Phones</h5>
+
+                @foreach (var item in Model.Settings)
+                {
+                    <p>@item.Phone</p>
+
+                }
+
             </div>
+
+
             <div class="col-lg-4 text-center">
-                <h5 style="font-size:60px; margin-top:100px;">Phones</h5>
-                <p style="font-size:19px; margin-bottom:120px;">+1 265-56-65-44; +1 648-513-65-11</p>
+                <h5>Join Us</h5>
+
+                @foreach (var item in Model.Settings)
+                {
+                    <a class="link" href=""><i class="@item.Facebook"></i></a>
+                    <a class="link" href=""><i class="@item.Instagram" style="padding-left:22px;"></i></a>
+                }
+
             </div>
+
         </div>
     </div>
 </section>
@@ -35,20 +68,24 @@
 <section id="Sec3">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
-                <img src="~/Public/img/contact-img.jpg" style="width:100%">
-            </div>
-            <div class="col-lg-6 text-center">
-                <h3>Craft beer elit seitan exercitation photo chips proident chillwave deep laborum</h3>
-                <p style="color:black">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
-                </p>
-            </div>
+            @foreach (var item in Model.Contacts)
+            {
+                <div class="col-lg-6">
+                    <img src="../../Uploads/@item.Photo" style="width:100%">
+                </div>
+                <div class="col-lg-6 text-center">
+                    <h3>@item.Title</h3>
+                    <p style="color:black">
+                        @item.Text
+                    </p>
+                </div>
+            }
         </div>
     </div>
 </section>
-<!-- SEC3 ENDS -->
+<!-- SEC3 ENDS
+
+
 <!-- MAP SECTION STARTS -->
 <section id="Map">
     <div class="container">

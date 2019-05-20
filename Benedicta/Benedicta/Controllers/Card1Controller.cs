@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Benedicta.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,14 @@ namespace Benedicta.Controllers
 {
     public class Card1Controller : Controller
     {
-        // GET: Card1
+        private readonly BenedictaContext db = new BenedictaContext();
+
         public ActionResult Index()
         {
-            return View();
+            AddView model = new AddView();
+            model.News = db.New.OrderByDescending(a => a.Id).Take(1).ToList();
+            model.Users = db.User.OrderByDescending(s => s.Id).Take(1).ToList();
+            return View(model);
         }
     }
 }

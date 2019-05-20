@@ -171,3 +171,11 @@ C:\Users\afiqi\Desktop\Benedicta-Restaurant-master\Benedicta\Benedicta\obj\Debug
 C:\Users\afiqi\Desktop\Benedicta-Restaurant-master\Benedicta\Benedicta\obj\Debug\Benedicta.Migrations.CreateDatabase.resources
 C:\Users\afiqi\Desktop\Benedicta-Restaurant-master\Benedicta\Benedicta\obj\Debug\Benedicta.csproj.GenerateResource.cache
 C:\Users\afiqi\Desktop\Benedicta-Restaurant-master\Benedicta\Benedicta\obj\Debug\Benedicta.Migrations.UpdateDatabase.resources
+C:\Users\afiqi\Desktop\Benedicta-Restaurant-master\Benedicta\Benedicta\obj\Debug\Benedicta.Migrations.UpdateDatabase1.resources
+C:\Users\afiqi\Desktop\Benedicta-Restaurant-master\Benedicta\Benedicta\obj\Debug\Benedicta.Migrations.AddedReserveTableBg.resources
+C:\Users\afiqi\Desktop\Benedicta-Restaurant-master\Benedicta\Benedicta\obj\Debug\Benedicta.Migrations.DeletedTable.resources
+C:\Users\afiqi\Desktop\Benedicta-Restaurant-master\Benedicta\Benedicta\obj\Debug\Benedicta.Migrations.AddedProperty.resources
+C:\Users\afiqi\Desktop\Benedicta-Restaurant-master\Benedicta\Benedicta\obj\Debug\Benedicta.Migrations.AddedAboutInfo.resources
+C:\Users\afiqi\Desktop\Benedicta-Restaurant-master\Benedicta\Benedicta\obj\Debug\Benedicta.Migrations.AddedNewsOffersTable.resources
+C:\Users\afiqi\Desktop\Benedicta-Restaurant-master\Benedicta\Benedicta\obj\Debug\Benedicta.Migrations.DeletedNewsOffers.resources
+C:\Users\afiqi\Desktop\Benedicta-Restaurant-master\Benedicta\Benedicta\obj\Debug\Benedicta.Migrations.AddedMenuTables.resources

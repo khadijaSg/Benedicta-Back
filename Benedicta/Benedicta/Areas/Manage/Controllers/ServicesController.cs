@@ -53,6 +53,7 @@ namespace Benedicta.Areas.Manage.Controllers
 
                 string fileName = DateTime.Now.ToString("yyyyMMddHHmmssff") + Photo.FileName;
                 string path = Server.MapPath("~/Uploads/");
+                Photo.SaveAs(path + fileName);
                 service.Photo = fileName;
                 db.Service.Add(service);
                 db.SaveChanges();
@@ -94,6 +95,7 @@ namespace Benedicta.Areas.Manage.Controllers
             {
                 string fileName = DateTime.Now.ToString("yyyyMMddHHmmssff") + Photo.FileName;
                 string path = Server.MapPath("~/Uploads/");
+                Photo.SaveAs(path + fileName);
                 service.Photo = fileName;
             }
 
